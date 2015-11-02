@@ -7,6 +7,7 @@ import java.util.Map;
  * 猜数字：
  * 1、正确的位置上的数字正确记A，统计其个数
  * 2、不正确的数字且在secret中，记为B，统计其个数
+ 
  * @author huangxw
  *
  */
@@ -18,6 +19,8 @@ public class Solution {
 		String str = s.getHint("1122", "2211");
 		System.out.println(str);
 	}
+	
+	//有待完善
 	 public String getHint(String secret, String guess) {
 	        int a=0;
 	        int b=0;
