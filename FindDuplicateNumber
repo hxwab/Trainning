@@ -1,0 +1,34 @@
+/**
+*给出n+1个介于1到N之间的数，证明一定存至少两个相等的数，并找出他们
+**Note:
+You must not modify the array (assume the array is read only).
+You must use only constant, O(1) extra space.
+Your runtime complexity should be less than O(n2).
+There is only one duplicate number in the array, but it could be repeated more than once.
+*
+*
+/
+
+
+
+
+
+public class Solution {
+    public int findDuplicate(int[] nums) {
+      
+       int number=0;
+		 int[] arr = new int[nums.length];
+		 for(int i=0;i<nums.length;i++){
+			 arr[nums[i]]++;
+		 }
+		 for(int i =0;i<arr.length;i++){
+			 if(arr[i]>1){
+				 number=i;
+				 break;
+			 }
+		 }
+		 
+		 return number;
+        
+    }
+}
