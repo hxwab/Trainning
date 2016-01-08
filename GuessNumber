@@ -20,7 +20,7 @@ public class Solution {
 		System.out.println(str);
 	}
 	
-	//有待完善
+	//有问题，有待完善
 	 public String getHint(String secret, String guess) {
 	        int a=0;
 	        int b=0;
