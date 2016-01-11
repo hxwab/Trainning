@@ -7,12 +7,10 @@ import java.util.Map;
  * 猜数字：
  * 1、正确的位置上的数字正确记A，统计其个数
  * 2、不正确的数字且在secret中，记为B，统计其个数
- 
  * @author huangxw
  *
  */
 public class Solution {
-	
 	
 	public static void main(String[] args) {
 		Solution s = new Solution();
@@ -43,6 +41,4 @@ public class Solution {
 	        
 	        return a+"A"+(mapB.size()+b)+"B";
 	    }
-	
-
 }
