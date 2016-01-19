@@ -3,14 +3,14 @@ package com.my.thread;
 import java.util.Random;
 
 /**
- * å‘çº¿ç¨‹ä¼ é€’å‚æ•°çš„æ–¹æ³•
- * @author csdc
+ÏòÏß³Ì´«µİ²ÎÊıµÄ·½·¨ 
+* @author csdc
  *
  */
-public class Param {
+public class SetParam {
 
 	public static void main(String[] args) {
-		Param p = new Param();
+		SetParam p = new SetParam();
 		p.testMyThread();
 		p.testMyThread2();
 		p.testMythread3();
@@ -37,7 +37,7 @@ public class Param {
 
 
 /**
- * æ„é€ å‡½æ•°ä¼ å‚æ•°
+ * ¹¹Ôìº¯Êı´«²Î
  * @author csdc
  *
  */
@@ -56,7 +56,11 @@ class MyThread1 extends Thread{
 }
 
 
-
+/**
+ * Í¨¹ıÉèÖµ
+ * @author csdc
+ *
+ */
 class MyThread2 implements Runnable{
 
 	private String name;
@@ -75,13 +79,12 @@ class MyThread2 implements Runnable{
 
 
 /**
- * é€šè¿‡å›å‡½æ•°ä¼ é€’å‚æ•°
+ *  Í¨¹ı»Øº¯Êı´«µİ²ÎÊı
  * @author csdc
- *ä¸Šé¢è®¨è®ºçš„ä¸¤ç§å‘çº¿ç¨‹ä¸­ä¼ é€’æ•°æ®çš„æ–¹æ³•æ˜¯æœ€å¸¸ç”¨çš„ã€‚ä½†è¿™ä¸¤ç§æ–¹æ³•éƒ½æ˜¯mainæ–¹æ³•ä¸­ä¸»åŠ¨å°†æ•°æ®ä¼ å…¥çº¿ç¨‹ç±»çš„ã€‚
- *è¿™å¯¹äºçº¿ç¨‹æ¥è¯´ï¼Œæ˜¯è¢«åŠ¨æ¥æ”¶è¿™äº›æ•°æ®çš„ã€‚ç„¶è€Œï¼Œåœ¨æœ‰äº›åº”ç”¨ä¸­éœ€è¦åœ¨çº¿ç¨‹è¿è¡Œçš„è¿‡ç¨‹ä¸­åŠ¨æ€åœ°è·å–æ•°æ®ï¼Œ
- *å¦‚åœ¨ä¸‹é¢ä»£ç çš„runæ–¹æ³•ä¸­äº§ç”Ÿäº†3ä¸ªéšæœºæ•°ï¼Œç„¶åé€šè¿‡Workç±»çš„processæ–¹æ³•æ±‚è¿™ä¸‰ä¸ªéšæœºæ•°çš„å’Œï¼Œ
- *å¹¶é€šè¿‡Dataç±»çš„valueå°†ç»“æœè¿”å›ã€‚ä»è¿™ä¸ªä¾‹å­å¯ä»¥çœ‹å‡ºï¼Œåœ¨è¿”å›valueä¹‹å‰ï¼Œå¿…é¡»è¦å¾—åˆ°ä¸‰ä¸ªéšæœºæ•°ã€‚
- *ä¹Ÿå°±æ˜¯è¯´ï¼Œè¿™ä¸ªvalueæ˜¯æ— æ³•äº‹å…ˆå°±ä¼ å…¥çº¿ç¨‹ç±»çš„
+ *ÉÏÃæÌÖÂÛµÄÁ½ÖÖÏòÏß³ÌÖĞ´«µİÊı¾İµÄ·½·¨ÊÇ×î³£ÓÃµÄ¡£µ«ÕâÁ½ÖÖ·½·¨¶¼ÊÇmain·½·¨ÖĞÖ÷¶¯½«Êı¾İ´«ÈëÏß³ÌÀàµÄ¡£
+ *Õâ¶ÔÓÚÏß³ÌÀ´Ëµ£¬ÊÇ±»¶¯½ÓÊÕÕâĞ©Êı¾İµÄ¡£È»¶ø£¬ÔÚÓĞĞ©Ó¦ÓÃÖĞĞèÒªÔÚÏß³ÌÔËĞĞµÄ¹ı³ÌÖĞ¶¯Ì¬µØ»ñÈ¡Êı¾İ£¬
+ *ÈçÔÚÏÂÃæ´úÂëµÄrun·½·¨ÖĞ²úÉúÁË3¸öËæ»úÊı£¬È»ºóÍ¨¹ıWorkÀàµÄprocess·½·¨ÇóÕâÈı¸öËæ»úÊıµÄºÍ£¬
+ *²¢Í¨¹ıDataÀàµÄvalue½«½á¹û·µ»Ø¡£´ÓÕâ¸öÀı×Ó¿ÉÒÔ¿´³ö£¬ÔÚ·µ»ØvalueÖ®Ç°£¬±ØĞëÒªµÃµ½Èı¸öËæ»úÊı¡£
  */
 class MyThread3  extends Thread{
 	private Work work;
@@ -98,7 +101,7 @@ class MyThread3  extends Thread{
 		int d2 = random.nextInt(2000);
 		int d3 = random.nextInt(3000);
 		Data data = new Data();
-		work.process(data, d1,d2,d3);//å›è°ƒå‡½æ•°
+		work.process(data, d1,d2,d3);//»Øµ÷º¯Êı
 		  System.out.println(String.valueOf(d1) + "+" + String.valueOf(d2) + "+"
 	                + String.valueOf(d3) + "=" + data.value);
 		
