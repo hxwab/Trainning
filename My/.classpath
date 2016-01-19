@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
+	<classpathentry kind="lib" path="E:/jar/lucene-5.0.0.zip"/>
+	<classpathentry kind="lib" path="E:/jar/lucene-analyzers-common-4.4.0.jar"/>
+	<classpathentry kind="lib" path="E:/jar/lucene-core-4.4.0.jar" sourcepath="E:/jar/lucene-5.0.0-src"/>
+	<classpathentry kind="lib" path="E:/jar/lucene-core-4.6.0.jar"/>
+	<classpathentry kind="lib" path="E:/jar/lucene-queryparser-4.6.0.jar" sourcepath="E:/jar/lucene-5.0.0-src"/>
+	<classpathentry kind="lib" path="E:/jar/poi-3.7-20101029.jar"/>
+	<classpathentry kind="lib" path="E:/jar/jxl.jar"/>
+	<classpathentry kind="lib" path="E:/jar/poi-examples-3.7-20101029.jar"/>
+	<classpathentry kind="lib" path="E:/jar/poi-ooxml-3.7-20101029.jar"/>
+	<classpathentry kind="lib" path="E:/jar/poi-ooxml-schemas-3.7-20101029.jar"/>
+	<classpathentry kind="lib" path="E:/jar/poi-scratchpad-3.7-20101029.jar"/>
+	<classpathentry kind="lib" path="E:/jar/dom4j-1.6.1.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
