@@ -1,0 +1,44 @@
+在使用synchronized关键字时有以下四点需要注意：(实质锁定的是整个类，在执行一个synchronized方法时，不能执行另外一个)  
+    1.  synchronized关键字不能继承。
+    虽然可以使用synchronized来定义方法，但synchronized并不属于方法定义的一部分，因此，synchronized关键字不能被继承。
+    如果在父类中的某个方法使用了synchronized关键字，而在子类中覆盖了这个方法，在子类中的这个方法默认情况下并不是同步的，而必须显式
+    地在子类的这个方法中加上synchronized关键字才可以。当然，还可以在子类方法中调用父类中相应的方法，这样虽然子类中的方法不是同步的，
+    但子类调用了父类的同步方法，因此，子类的方法也就相当于同步了。这两种方式的例子代码如下：
+    在子类方法中加上synchronized关键字
+class Parent
+{
+    public synchronized void method() {   }
+}
+class Child extends Parent
+{
+    public synchronized void method() {   }
+}
+    在子类方法中调用父类的同步方法
+class Parent
+{
+    public synchronized void method() {   }
+}
+class Child extends Parent
+{
+    public void method() { super.method();   }
+}
+    2.  在定义接口方法时不能使用synchronized关键字。
+    3.  构造方法不能使用synchronized关键字，但可以使用下节要讨论的synchronized块来进行同步。
+    4.  synchronized可以自由放置。
+    在前面的例子中使用都是将synchronized关键字放在方法的返回类型前面。但这并不是synchronized可放置唯一位置。在非静态方法中，
+    synchronized还可以放在方法定义的最前面，在静态方法中，synchronized可以放在static的前面，代码如下：
+public synchronized void method();
+synchronized public void method();
+public static synchronized void method();
+public synchronized static void method();
+synchronized public static void method();
+    但要注意，synchronized不能放在方法返回类型的后面，如下面的代码是错误的：
+public void synchronized method();
+public static void synchronized method();
+    synchronized关键字只能用来同步方法，不能用来同步类变量，如下面的代码也是错误的。
+public synchronized int n = 0;
+public static synchronized int n = 0;
+    虽然使用synchronized关键字同步方法是最安全的同步方式，但大量使用synchronized关键字会造成不必要的资源消耗以及性能损失。
+    虽然从表面上看synchronized锁定的是一个方法，但实际上synchronized锁定的是一个类。也就是说，如果在非静态方法method1和method2
+    定义时都使用了synchronized，在method1未执行完之前，method2是不能执行的。静态方法和非静态方法的情况类似。但静态和非静态方法不会互相影响。
+    看看如下的代码：
