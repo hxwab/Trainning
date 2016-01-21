@@ -50,7 +50,7 @@ public class SynchronizedExample  extends Thread{
 	     * @param args
 	     * @throws Exception
 	     */
-	    public static void main(String[] args) throws Exception
+	   /* public static void main(String[] args) throws Exception
 	    {
 	    	SynchronizedExample myThread1 = new SynchronizedExample();
 	        for (int i = 0; i <= 4; i++)
@@ -59,6 +59,7 @@ public class SynchronizedExample  extends Thread{
 	            new Thread(myThread1).start();
 	            sleep(100);
 	        }
+	    	
 	    }
-
+*/
 }
