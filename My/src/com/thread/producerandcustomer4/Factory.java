@@ -1,4 +1,4 @@
-package com.thread.producerandcustomer3;
+package com.thread.producerandcustomer4;
 
 public class Factory {
 	
@@ -7,14 +7,14 @@ public class Factory {
 	private boolean created = false;
 	
 	
-	public void create(){
+	public synchronized void create(){
 		
 		synchronized (this) {
 			if(!created){
 				i++;
 				System.out.println(Thread.currentThread().getName()+"created: "+i);
 				created =true;
-				notify();
+				notifyAll();
 			}else{
 				try {
 					wait();
@@ -33,7 +33,7 @@ public class Factory {
 				i--;
 				System.out.println(Thread.currentThread().getName()+"consume: "+i);
 				created = false;
-				notify();
+				notifyAll();
 			}else {
 				try {
 					wait();
@@ -45,4 +45,5 @@ public class Factory {
 			
 		}
 	}
+
 }
