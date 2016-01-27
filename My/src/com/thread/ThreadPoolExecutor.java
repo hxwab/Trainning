@@ -6,7 +6,10 @@ import java.util.concurrent.Executors;
 public class ThreadPoolExecutor {
 	
 	public static void main(String[] args) {
-		ExecutorService executor = Executors.newFixedThreadPool(5);
+		ExecutorService executor = Executors.newFixedThreadPool(3);//大小固定，超过线程池大小的不会执行
+		ExecutorService executor1 = Executors.newCachedThreadPool();
+		ExecutorService executor2 = Executors.newSingleThreadExecutor();//单个
+		ExecutorService executor3 = Executors.newScheduledThreadPool(10);
 		for(int i=0;i<5;i++){
 			executor.execute(new TestRunnable());
 		    System.out.println("******a"+i+"******");
