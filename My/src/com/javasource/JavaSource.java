@@ -19,7 +19,6 @@ import java.util.WeakHashMap;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 
-import org.apache.poi.hssf.usermodel.examples.NewLinesInCells;
 /**
  * 
  * Collection
