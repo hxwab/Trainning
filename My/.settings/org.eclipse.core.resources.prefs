@@ -1,4 +1,9 @@
-#Tue Jan 19 15:05:28 CST 2016
+#Wed May 04 09:45:03 CST 2016
 eclipse.preferences.version=1
+encoding//src/com/algorithms/number=UTF-8
+encoding//src/com/algorithms/recursion=UTF-8
+encoding//src/com/algorithms/sort=UTF-8
+encoding//src/com/algorithms/string=UTF-8
+encoding//src/com/algorithms/tree=UTF-8
 encoding//src/com/altho/MaxSubarray.java=UTF-8
 encoding//src/com/my/thread/StopThread.java=UTF-8
