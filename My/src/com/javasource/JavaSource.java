@@ -16,8 +16,17 @@ import java.util.TreeMap;
 import java.util.TreeSet;
 import java.util.Vector;
 import java.util.WeakHashMap;
-import java.util.concurrent.ConcurrentHashMap;
+
+
+//一下为 原子操作包
 import java.util.concurrent.ConcurrentMap;
+import java.util.concurrent.atomic.AtomicInteger;
+import java.util.concurrent.locks.ReentrantLock;
+import java.util.concurrent.Callable;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.*;
+
+
 
 /**
  * 
@@ -70,4 +79,14 @@ public class JavaSource {
 	
 	Map  cocurrentHashMap = new ConcurrentHashMap();
 	ConcurrentMap  concurrentHashMap = new  ConcurrentHashMap();
+	
+	//原子操作
+	AtomicInteger atomicInteger = new AtomicInteger();
+	ReentrantLock lock = new ReentrantLock();
+	
+	
+	Callable   call ;
+	FutureTask futurTask;
+	Future future;
+	
 }

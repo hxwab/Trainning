@@ -7,7 +7,7 @@ public class Factory {
 	private boolean created = false;
 	
 	
-	public synchronized void create(){
+	public  void create(){
 		
 		synchronized (this) {
 			if(!created){
